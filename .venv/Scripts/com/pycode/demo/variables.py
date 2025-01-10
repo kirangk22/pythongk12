@@ -14,3 +14,5 @@ print("is humam:"+str(is_human))
 
 
 print(str(type(fname))+"-"+str(type(age))+"-"+str(type(height))+"-"+str(type(is_human)))
+
+print(f"Hi {fname} {lname} \n My age is:{age}")
