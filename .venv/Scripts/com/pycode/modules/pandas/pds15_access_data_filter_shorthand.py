@@ -17,17 +17,6 @@ bios=pd.read_csv(path)
 print(bios) # All rows and cols
 print(bios.info())  # to see cols and datatypes info
 
-# bios.loc[#rows,#cols_list] here #rows,#cols_list both are optional params
-# loc[some boolean condition] to Filter data *****IMP****
-# Filtering Rows whose height_cm >215
-print(bios.loc[bios["height_cm"] > 215])
-
-# loc[some boolean condition,[cols_list]] to Filter data *****IMP****
-print(bios.loc[bios["height_cm"] > 215 , ["name","height_cm"]])
-
-# here first param used to filter data rows based on condition,second param to grap/select cols in filtered data
-
-
 # Shorthand Method to Filter Data....USEFUL
 # same above without loc method
 print(bios[bios["height_cm"] > 215]) # Filter data based on some condition
