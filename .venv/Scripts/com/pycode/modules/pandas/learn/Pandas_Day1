@@ -14,11 +14,17 @@ File->opennotebook-->slect git repo--->goto folder to select ipynb file
 # bios.loc[#rows,#cols_list] here #rows,#cols_list both are optional params
 # loc[some boolean condition] to Filter data *****IMP****
 # loc[some boolean condition,[cols_list]] to Filter data *****IMP****
-# use either boolean condition to Filter date or use slice operator to filter data based on index rows
+# use either boolean condition to Filter data or use slice operator to filter data based on index rows
 #finally first param purpose is to Filter data
-# here first param used to filter data,second param to select cols in filtered data
+
+# here first param used to filter data rows based on condition,second param to grab/select cols in filtered data
 
 
+# filter using conditions
+#df[(cond1) & (cond2)])
+# here cond1=df["height_cm"]>215  & df["born_country"]=="USA"
+# Ex: print(df[(df["height_cm"]>215) & (df["born_country"]=="USA")])
+# See Ex: pds16_access_data_filter.py
 
 
 
