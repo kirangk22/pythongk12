@@ -27,9 +27,16 @@ File->opennotebook-->slect git repo--->goto folder to select ipynb file
 # See Ex: pds16_access_data_filter.py
 
 
+# Filter rows based on Regex
+# df["col"].str.contains(r'regex')
 
+#df.query('')  usage for filter rows
 
-
+# drop cols or rows
+# Formauls :
+# df.drop(index number of row)
+# df.drop([index number of rows])
+# df.drop(columns=[list of cols to drop])
 
 
 
