@@ -20,6 +20,17 @@ File->opennotebook-->slect git repo--->goto folder to select ipynb file
 # here first param used to filter data rows based on condition,second param to grab/select cols in filtered data
 
 
+#Assign values
+df['col1']="my_value"
+df['col_new']=df['col1'] * df['col2']
+coffee.loc[0:2,['Units Sold']]=np.nan  # for 0to 2nd index rows assign null to column 'Units Sold'
+
+# can check df has null values or not
+coffee.info()  # info about dataframe. it shows total entries and non-null entries counts
+print(coffee.isna().sum()) # shows each columns how many nulls there with counts
+
+
+
 # filter using conditions
 #df[(cond1) & (cond2)])
 # here cond1=df["height_cm"]>215  & df["born_country"]=="USA"
@@ -42,6 +53,19 @@ File->opennotebook-->slect git repo--->goto folder to select ipynb file
 
 # pd.merge() to join dataframes..can do all joij using how=''
 # pd.concat() to concat based on axis, union purposes axis 0 default..combines rows
+
+# now check data above join bios.athlete_id with results.athlete_id  (joined col name same on both dfs)
+# how= default inner, use whatever needed join
+joined_df=pd.merge(results,bios,on='athlete_id',how='left')
+#left_on='',right_on='' not needed as col name is same on both dfs
+print(joined_df)
+# after join if any duplicate columns are there,those comes with suffix x,y
+# we can use our own suffix if needed.
+
+# here apply() take entire row of dataframe
+bios['athlet_ctg']=bios.apply(athlet_ctg,axis=1)
+# axis=1 means rows.....passing one by one rows of dataframe
+# axis=0 means cols in apply()
 
 
 
