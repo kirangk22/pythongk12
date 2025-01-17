@@ -38,5 +38,10 @@ File->opennotebook-->slect git repo--->goto folder to select ipynb file
 # df.drop([index number of rows])
 # df.drop(columns=[list of cols to drop])
 
+# print(bios.info())  # to check Datatypes of columns
+
+# pd.merge() to join dataframes..can do all joij using how=''
+# pd.concat() to concat based on axis, union purposes axis 0 default..combines rows
+
 
 

@@ -23,7 +23,7 @@ print(coffee)
 #df['new_price']=np.where(df['col_n']=="Espresso",Truecase,Falsecase)
 
 
-
+#    drop with inplace attrib usage
 print(coffee.drop(columns=['price'],inplace=True))
 print(coffee)  # Now NOT shows price col
 
