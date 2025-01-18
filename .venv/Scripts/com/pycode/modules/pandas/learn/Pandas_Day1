@@ -67,5 +67,12 @@ bios['athlet_ctg']=bios.apply(athlet_ctg,axis=1)
 # axis=1 means rows.....passing one by one rows of dataframe
 # axis=0 means cols in apply()
 
+# adding new col based on other col case condition
+import numpy as np
+coffee['price']=np.where(coffee['Coffee Type']=='Espresso',3.99,5.99)
+
+
+# Formula:
+# df.groupby([list_of_cols][[list_of_selected_cols_for aggn]].agg([agg funs]))
 
 
