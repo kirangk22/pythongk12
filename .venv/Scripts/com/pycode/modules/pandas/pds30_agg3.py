@@ -25,6 +25,11 @@ print(coffee.pivot(columns=['Coffee Type'],values='revenue',index='Day')) # inde
 # here observe 'Day' col val is same/common for above both cols which involved in pivot
 # Day is index that's why.....in spark 'Day' is under 'group by'
 
+# in pivot,
+#one col participate as colnames/colheadings
+#other col participate as col values
+# for above both cols there is common col whcih is used as index/group by
+
 
 
 
