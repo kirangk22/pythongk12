@@ -30,8 +30,21 @@ print(coffee.pivot(columns=['Coffee Type'],values='revenue',index='Day')) # inde
 #other col participate as col values
 # for above both cols there is common col whcih is used as index/group by
 
+pivot_data=coffee.pivot(columns=['Coffee Type'],values='revenue',index='Day')
+print(pivot_data.loc['Monday','Latte'])  # grab 'Monday' index row and get value of 'Latte' col
+print(pivot_data.loc['Monday']['Latte']) # same above with diff syntax
 
+print(pivot_data.sum()) # gives sum of each column values..for sting vals concatinates
 
+#print(coffee.sum())
+
+# print(coffee.loc[10])
+# print(coffee.loc[10:10])  # access 10th index row
+# print(coffee.loc[10:10,['Day','Coffee Type']]) # 10th index row with selected cols
+# print(coffee.columns)
+# print(coffee)
+# print(coffee.loc[10:,["Day","Units Sold"]])
+# print(coffee.loc[10,'Day'])
 
 # So, in summary:
 #
